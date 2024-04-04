@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+body{
+  color: var(--nav-color) !important;
+}
+/* ------------------------------------------colors ----------------------------------- */
+
+:root {
+  --nav-color: #31363F;
+  --main-color:#76ABAE;
+  --text-color:#EEEEEE;
+}
+
+button{
+  background-color: var(--main-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* dark mode */
+.dark{
+  background-color: black !important;
+  color: white !important;
+}
