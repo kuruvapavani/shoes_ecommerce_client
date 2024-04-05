@@ -25,3 +25,7 @@ button{
   background-color: black !important;
   color: white !important;
 }
+
+.carousel-image {
+  height: 100%; /* Adjust this value as needed */
+}

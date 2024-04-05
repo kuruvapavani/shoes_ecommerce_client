@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <div className={`bg-${darkMode ? 'gray-900' : 'white'}`}>
+    <div className={`bg-${darkMode ? 'gray-900' : 'white'} fixed w-full`}>
       <Disclosure as="nav" className={`bg-${darkMode ? 'gray-900' : 'white'}`}>
         {({ open }) => (
           <>
@@ -112,14 +112,14 @@ const Header = () => {
                     >
 
 
-                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className={`absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md  py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${darkMode?'bg-black text-white':'bg-white text-black'}`}>
                         <Menu.Item>
                           {({ active }) => (
                             <a
                               href="/profile"
                               className={`${classNames(active ? '' : 'block px-4 py-2 text-sm text-gray-700')} ${darkMode?'bg-black text-white':'bg-white text-black'}`}
                             >
-                             <span>Your Profile</span>
+                             <div>Your Profile</div>
                             </a>
                           )}
                         </Menu.Item>
@@ -129,7 +129,7 @@ const Header = () => {
                               href="/memberships"
                               className={`${classNames(active ? '' : 'block px-4 py-2 text-sm text-gray-700')} ${darkMode?'bg-black text-white':'bg-white text-black'}`}
                             >
-                            <span>Memberships</span>
+                            <div>Memberships</div>
                             </a>
                           )}
                         </Menu.Item>
@@ -139,7 +139,7 @@ const Header = () => {
                               href="/logout"
                               className={`${classNames(active ? '' : 'block px-4 py-2 text-sm text-gray-700')} ${darkMode?'bg-black text-white':'bg-white text-black'}`}
                             >
-                            <span>Sign out</span>
+                            <div>Sign out</div>
                             </a>
                           )}
                         </Menu.Item>
